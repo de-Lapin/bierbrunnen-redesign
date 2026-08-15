@@ -79,13 +79,13 @@ export const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#anfahrt" className={styles.navLink}>
-                Anfahrt
+              <a href="#kontakt" className={styles.navLink}>
+                Öffnungszeiten & Kontakt
               </a>
             </li>
             <li>
-              <a href="#kontakt" className={styles.navLink}>
-                Öffnungszeiten & Kontakt
+              <a href="#anfahrt" className={styles.navLink}>
+                Anfahrt
               </a>
             </li>
           </ul>

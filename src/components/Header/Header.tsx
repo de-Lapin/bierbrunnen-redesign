@@ -88,13 +88,13 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#anfahrt" className={styles.navLink}>
-                Anfahrt
+              <a href="#kontakt" className={styles.navLink}>
+                Kontakt
               </a>
             </li>
             <li>
-              <a href="#kontakt" className={styles.navLink}>
-                Kontakt
+              <a href="#anfahrt" className={styles.navLink}>
+                Anfahrt
               </a>
             </li>
           </ul>
@@ -172,13 +172,13 @@ export const Header: React.FC = () => {
               </a>
             </li>
             <li className={styles.mobileNavItem}>
-              <a href="#anfahrt" className={styles.mobileNavLink} onClick={closeMenu}>
-                Anfahrt
+              <a href="#kontakt" className={styles.mobileNavLink} onClick={closeMenu}>
+                Kontakt
               </a>
             </li>
             <li className={styles.mobileNavItem}>
-              <a href="#kontakt" className={styles.mobileNavLink} onClick={closeMenu}>
-                Kontakt
+              <a href="#anfahrt" className={styles.mobileNavLink} onClick={closeMenu}>
+                Anfahrt
               </a>
             </li>
           </ul>
