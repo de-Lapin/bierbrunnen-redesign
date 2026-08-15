@@ -1,0 +1,36 @@
+:root {
+  /* Brand Color Palette - Warm Ivory & Sand Tone */
+  --color-forest: #1b382b;
+  --color-forest-dark: #11241b;
+  --color-forest-light: #254b3a;
+  --color-cream: #f6f0e5;
+  --color-cream-alt: #eadfce;
+  --color-gold: #c59b27;
+  --color-gold-hover: #b08920;
+  --color-gold-light: rgba(197, 155, 39, 0.12);
+  --color-wood: #2a1a0e;
+  --color-text: #2c1d11;
+  --color-text-muted: #5a5047;
+  --color-white: #ffffff;
+  --color-border: rgba(42, 26, 14, 0.12);
+  --color-border-subtle: rgba(197, 155, 39, 0.2);
+
+  /* Typography System */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout & Rhythm */
+  --max-width: 1220px;
+  --header-height: 72px;
+
+  /* Radii & Subtle Shadows */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --shadow-subtle: 0 2px 8px rgba(42, 26, 14, 0.04);
+  --shadow-editorial: 0 6px 20px rgba(17, 36, 27, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

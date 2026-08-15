@@ -1,0 +1,246 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  box-shadow: var(--shadow-subtle);
+  border-bottom: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  min-height: 48px;
+}
+
+.monogram {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-forest-dark);
+  border: 1.5px solid var(--color-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.05em;
+  flex-shrink: 0;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-cream);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.675rem;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  color: var(--color-cream);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.4rem 0.35rem;
+  transition: color var(--transition-fast);
+  min-height: 44px;
+}
+
+.navLink:hover {
+  color: var(--color-gold);
+}
+
+.phoneCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--color-gold);
+  color: var(--color-wood);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.phoneCta:hover {
+  background-color: var(--color-gold-hover);
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(251, 249, 244, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--color-cream);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+/* Full-Screen Smooth Staggered Overlay (2.5s Total Duration) */
+.mobileOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 36, 27, 0.98);
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 20px;
+  overflow-y: auto;
+
+  /* Sequence 1 & 2: Backdrop fade & slide panel */
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 2500ms cubic-bezier(0.22, 1, 0.36, 1), transform 2500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobileOverlay.isOpen {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.closeBtn {
+  background: none;
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  color: var(--color-gold);
+  font-size: 1.5rem;
+  padding: 0.5rem 0.85rem;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Sequence 3: Staggered navigation links */
+.mobileNavItem {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1800ms cubic-bezier(0.22, 1, 0.36, 1), transform 1800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobileOverlay.isOpen .mobileNavItem {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileOverlay.isOpen .mobileNavItem:nth-child(1) { transition-delay: 200ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(2) { transition-delay: 350ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(3) { transition-delay: 500ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(4) { transition-delay: 650ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(5) { transition-delay: 800ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(6) { transition-delay: 950ms; }
+.mobileOverlay.isOpen .mobileNavItem:nth-child(7) { transition-delay: 1100ms; }
+
+.mobileNavLink {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--color-cream);
+  transition: color var(--transition-fast);
+  min-height: 48px;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-gold);
+}
+
+/* Sequence 4: Call CTA appears last */
+.mobileCallWrapper {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 1800ms cubic-bezier(0.22, 1, 0.36, 1) 1250ms, transform 1800ms cubic-bezier(0.22, 1, 0.36, 1) 1250ms;
+}
+
+.mobileOverlay.isOpen .mobileCallWrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileCallBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: var(--color-gold);
+  color: var(--color-wood);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.9rem 2rem;
+  border-radius: var(--radius-sm);
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  min-height: 52px;
+}
+
+@media (max-width: 1024px) {
+  .menuToggle {
+    display: flex;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+}

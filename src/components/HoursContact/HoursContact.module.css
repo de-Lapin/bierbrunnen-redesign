@@ -1,0 +1,210 @@
+.section {
+  padding: 4rem 0;
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+}
+
+.integratedBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(197, 155, 39, 0.25);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.5rem;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.leftColumn {
+  padding-right: 1.5rem;
+  border-right: 1px solid rgba(251, 249, 244, 0.12);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-cream);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.titleIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+  margin-top: 0.25rem;
+}
+
+.hoursItem {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(251, 249, 244, 0.1);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.hoursItem:last-child {
+  border-bottom: none;
+}
+
+.dayLabel {
+  font-weight: 500;
+  color: var(--color-cream);
+}
+
+.timeLabel {
+  color: var(--color-gold);
+  font-weight: 700;
+}
+
+.closedLabel {
+  color: rgba(251, 249, 244, 0.6);
+  font-weight: 600;
+}
+
+.addressBlock {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(251, 249, 244, 0.85);
+}
+
+.addressBlock strong {
+  color: var(--color-cream);
+  font-size: 1.05rem;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.socialLabel {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: rgba(251, 249, 244, 0.75);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  color: var(--color-gold);
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  background-color: rgba(197, 155, 39, 0.08);
+  transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.socialLink:hover {
+  color: var(--color-gold-hover);
+  border-color: var(--color-gold);
+  background-color: rgba(197, 155, 39, 0.18);
+  transform: translateY(-1px);
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.ownerPhraseBox {
+  background-color: rgba(197, 155, 39, 0.15);
+  border-left: 3.5px solid var(--color-gold);
+  padding: 0.75rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.ownerPhrase {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--color-cream);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.phoneDisplay {
+  font-family: var(--font-sans);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
+}
+
+.emailLink {
+  color: var(--color-cream);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.phoneBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background-color: var(--color-gold);
+  color: var(--color-wood);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  text-align: center;
+  min-height: 44px;
+  align-self: flex-start;
+}
+
+.phoneBtn:hover {
+  background-color: var(--color-gold-hover);
+}
+
+.btnIcon {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .integratedBox {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding: 1.5rem;
+  }
+
+  .leftColumn {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(251, 249, 244, 0.12);
+    padding-bottom: 1.5rem;
+  }
+
+  .phoneBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

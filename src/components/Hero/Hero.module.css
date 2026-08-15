@@ -1,0 +1,215 @@
+.section {
+  padding: 2.25rem 0 3rem 0;
+  background-color: var(--color-cream);
+}
+
+/* Single Shared Outer Container Defining Hero Width */
+.heroOuter {
+  width: min(1220px, calc(100% - 48px));
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Authentic Original Heritage Banner (Top of Hero, Shared heroOuter Container) */
+.heritageBanner {
+  width: 100%;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-editorial);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-forest-dark);
+  display: block;
+  box-sizing: border-box;
+}
+
+.heritageImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Desktop Split Hero Grid (44% Text / 56% Building) */
+.grid {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+  gap: 2.5rem;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+/* Keep both columns inside the shared hero width. Percentage columns + a gap
+   would overflow the 1220px wrapper; fractional tracks account for the gap. */
+.textCard,
+.mainImageFrame {
+  min-width: 0;
+}
+
+.textCard {
+  background-color: var(--color-forest);
+  color: var(--color-cream);
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-editorial);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  color: var(--color-cream);
+  line-height: 1.08;
+  margin-bottom: 1.35rem;
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: rgba(251, 249, 244, 0.92);
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-gold);
+  color: var(--color-wood);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+  min-height: 52px;
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-gold-hover);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  background-color: transparent;
+  color: var(--color-cream);
+  border: 1px solid rgba(251, 249, 244, 0.4);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.925rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+  min-height: 52px;
+}
+
+.btnSecondary:hover {
+  background-color: rgba(251, 249, 244, 0.12);
+  border-color: var(--color-cream);
+}
+
+/* Building Image Frame - Cropped/Reframed inside container */
+.mainImageFrame {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-editorial);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-forest-dark);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  box-sizing: border-box;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 1.25rem 0 2rem 0;
+  }
+
+  .heroOuter {
+    width: calc(100% - 40px);
+  }
+
+  .heritageBanner {
+    margin-bottom: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .textCard {
+    padding: 2rem 20px;
+  }
+
+  .headline {
+    font-size: clamp(2rem, 7.5vw, 2.6rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .description {
+    font-size: 0.975rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .btnPrimary, .btnSecondary {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+  }
+
+  .mainImageFrame {
+    min-height: auto;
+  }
+
+  .mainImage {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain;
+  }
+}
