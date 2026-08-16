@@ -76,7 +76,10 @@ export const IntroExperience: React.FC<IntroExperienceProps> = ({ onStateChange 
     return null;
   }
 
-  const gateImgSrc = '/images/intro-bb-gates-closed.jpg';
+  // Use mobile webp asset up to 768px, and approved desktop closed gates asset above 768px
+  const desktopGateImgSrc = '/images/intro-bb-gates-closed.jpg';
+  const mobileGateImgSrc = '/images/intro-bb-gates-mobile.webp';
+  const gateImgSrc = isMobile ? mobileGateImgSrc : desktopGateImgSrc;
 
   return (
     <div
